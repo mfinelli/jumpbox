@@ -5,8 +5,8 @@ COPY ./dashbinsh.hook /usr/share/libalpm/hooks/dashbinsh.hook
 RUN \
   pacman -Syu --noconfirm \
     bind \
-    curl \
     dash \
+    git \
     inetutils \
     postgresql \
     redis && \
