@@ -1,10 +1,12 @@
 FROM archlinux
 
+COPY ./dashbinsh.hook /usr/share/libalpm/hooks/dashbinsh.hook
+
 RUN \
-  pacman -Syu --noconfirm && \
-  pacman -S --noconfirm \
+  pacman -Syu --noconfirm \
     bind \
     curl \
+    dash \
     inetutils \
     postgresql \
     redis && \
