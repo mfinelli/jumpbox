@@ -9,7 +9,8 @@ RUN \
     git \
     inetutils \
     postgresql \
-    redis && \
+    redis \
+    traceroute && \
   pacman -Scc --noconfirm
 
 COPY ./keepalive.sh /keepalive.sh
