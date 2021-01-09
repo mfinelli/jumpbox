@@ -19,7 +19,7 @@ jobs:
           aws-region: us-west-2
       - uses: azure/setup-helm@v1
       - run: helm plugin install https://github.com/hypnoglow/helm-s3.git
-      - run: helm s3 init s3://finelli-helm-charts
+      # - run: helm s3 init s3://finelli-helm-charts
       - run: helm repo add mfinelli s3://finelli-helm-charts
       - run: helm package -u charts/jumpbox
       - run: helm s3 push --relative ./jumpbox-*.tgz mfinelli
